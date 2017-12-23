@@ -1,0 +1,6 @@
+build/
+node_modules/
+.vscode/
+.idea/
+public/dist/
+yarn-error.log

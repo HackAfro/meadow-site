@@ -1,0 +1,91 @@
+extends layout
+
+block links
+  link(rel="stylesheet", href="dist/stylesheets/index.css")
+
+block content
+  
+  section.hero-section
+    .flex(class="w-full px-8 lg:w-3/4 mx-auto inline h-full")
+      .text-left.flex.h-full.flex-col.justify-center(class="w-full md:w-3/4 lg:w-3/5 inline text-white")
+        h1.mb-4(class="text-3xl lg:text-4xl") We aim to improve food security #[br] in Africa
+        p.font-thin.text-lg At Meadow Foods, we aspire to solve global food challenges by partnering #[br] with our local communities to create growth
+        div
+          button.rounded.shadow-md.text-center.text-green.px-8.py-3.my-4.bg-white.uppercase.text-xs.font-extrabold About Us
+  section.operation.pt-8
+    h2.font-extrabold.uppercase.text-center.text-sm How we operate
+
+    .flex.flex-wrap.items-center.mx-auto(class="w-full lg:w-3/4")
+      .flex.flex-col.items-center.text-center(class="w-full lg:w-1/3")
+        img.operation-icon(src="/images/finance-img.svg", alt="")
+        h3.font-extrabold.my-2.opacity-75 Financing
+        p.font-bold.text-sm.opacity-50 Farmers have all the necessary #[br] input for production provided for  #[br] them
+      
+      .flex.flex-col.items-center.text-center(class="w-full lg:w-1/3")
+        img.operation-icon(src="/images/dist-img.svg", alt="")
+        h3.font-extrabold.my-2.opacity-75 Distribution
+        p.font-bold.text-sm.opacity-50 Input are delivered on site to the #[br] farmers
+      
+      .flex.flex-col.items-center.text-center(class="w-full lg:w-1/3")
+        img.operation-icon(src="/images/cap-build.svg", alt="")
+        h3.font-extrabold.my-2.opacity-75 Capacity Building
+        p.font-bold.text-sm.opacity-50 We train farmers on modern #[br] agricultural methods for the #[br] purpose of achieving optimum #[br] yield 
+  
+  section.testimonials.py-8
+    div.py-4.px-4(class="w-full mx-auto lg:w-1/3")
+      h2.font-extrabold.uppercase.text-lg.my-4.text-center.text-white Testimonials
+      .bg-white.shadow-lg.flex.flex-col.relative
+        .flex.py-3
+          div(class="w-1/2").relative
+            div.w-6.h-8.bg-grey.testi-image
+          div(class="w-1/2")
+            h3.font-extrabold.uppercase.my-1 John Doe
+            p.opacity-75.font-xs Strategic Farmer
+
+        .px-6.pb-8.pt-4
+          p.text-xs.text-centre
+          | Kija Katemana hadn’t ever owned much. The 36-year-old single mother of four rented both
+          | her house and a small plot of land in rural Tanzania.
+          | The little income she earned from farming andling
+          | baked samosas in town went entirely toward food and
+          | trying to pay her children’s school fees.
+        
+        .flex.absolute.slide-toggles
+          button.rounded-l.bg-green-light.text-center.text-white.py-2.px-4.next #[i.fa.fa-arrow-left]
+          button.rounded-r.bg-green.text-center.text-white.py-2.px-4.prev #[i.fa.fa-arrow-right]
+
+  section.contact
+    h2.font-extrabold.uppercase.text-center.text-sm Contact Us
+    
+    .flex.flex-wrap.px-8(class="w-full lg:w-4/5 lg:mx-auto")
+      div(class="w-full lg:w-3/5")
+        h2.uppercase.font-extrabold.my-4.text-sm.text-center Send us a Message
+
+        form#contact-form(class="w-full lg:w-3/4 lg:mx-auto")
+          div.flex.flex-wrap.mb-8
+            div(class="w-full px-4 py-4 mb-8 md:w-1/2 md:mb-0 lg:w-1/2 lg:mb-0 ")
+              input.border-b-2.border-grey.w-full.py-3.px-6(type="text", class="focus:border-green", placeholder="Your Name")
+            div(class="w-full px-4 py-4 md:w-1/2 lg:w-1/2")
+              input.border-b-2.border-grey.w-full.py-3.px-6(type="text", class="focus:border-green", placeholder="Your Email")
+          div(class="px-4 py-4")
+            textarea.border-b-2.border-grey.w-full.py-3.px-4(class="focus:border-green", placeholder="Your Message")
+      div(class="w-full flex flex-col items-center text-center lg:w-1/3 lg:items-start lg:text-left").contact-details
+        div
+          h2.text-sm.font-extrabold.text-grey.uppercase.my-3 Call Us
+          p.text-xs.font-extrabold.opacity-75 +234 803 1932 212
+        div.mt-6
+          h2.text-sm.font-extrabold.text-grey.uppercase.my-3 Visit Us
+          p.text-xs.font-extrabold.uppercase.opacity-75.leading-md
+            | No 80 Afaha Eket Road, #[br]
+            | Eket, Akwa Ibom State
+        div.mt-6
+          h2.text-sm.font-extrabold.text-grey.uppercase.my-3 Like/Follow Us
+          p.text-xs.font-extrabold.uppercase.opacity-75.leading-md.mb-4 #[i.fa.fa-twitter.mr-4] @MeadowFoodsNig
+          p.text-xs.font-extrabold.uppercase.opacity-75.leading-md #[i.fa.fa-facebook.mr-4] @MeadowFoodsNig
+
+  section.partners.mt-8.py-8
+    h2.font-extrabold.uppercase.text-center.text-sm.mt-8.mb-4 Our Partners
+    div.flex.flex-wrap.justify-center.items-center.text-center.py-8.flex-col(class="lg:flex-row")
+      img(src="/images/farm-crowdy.png", alt="Farm crowdyy logo" class="partner lg:ml-0 lg:mr-8")
+      img(src="/images/akwa-hatchery.jpg", alt="Akwa prime hatchery" class="partner lg:ml-6 mt-6 lg:mt-0")
+  
