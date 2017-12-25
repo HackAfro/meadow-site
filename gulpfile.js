@@ -31,7 +31,7 @@ gulp.task('tailwind', () => {
             tailwind('./tailwind.js'),
             require('autoprefixer')
         ]))
-        .pipe(gulp.dest('public/stylesheets/'));
+        .pipe(gulp.dest('public/dist/stylesheets/styles.scss'));
 });
 
 // gulp.task('pug', () =>

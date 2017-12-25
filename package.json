@@ -2,28 +2,28 @@
   "name": "meadow-site",
   "version": "0.0.0",
   "private": true,
-  "scripts": {
-    "prestart": "tailwind build config.css -o styles.css",
-    "start": "node ./bin/www"
-  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "debug": "^2.6.9",
     "express": "^4.15.5",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
     "morgan": "^1.9.0",
     "node-sass": "^4.7.2",
     "node-sass-middleware": "^0.11.0",
     "pug": "^2.0.0-beta11",
-    "serve-favicon": "^2.4.5"
+    "serve-favicon": "^2.4.5",
+    "tailwindcss": "^0.4.0"
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "start-dev": "nodemon ./bin/www",
+    "build": "gulp"
   },
   "devDependencies": {
     "browser-sync": "^2.21.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-postcss": "^7.0.0",
-    "gulp-pug": "^3.3.0",
-    "gulp-sass": "^3.1.0",
-    "tailwindcss": "^0.4.0"
+    "gulp-pug": "^3.3.0"
   }
 }
