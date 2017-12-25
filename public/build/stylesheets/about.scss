@@ -1,6 +1,7 @@
 @import './layout.scss';
 .hero-section {
-    height: 400px;
+    height: 300px;
+    width: fit-content;
     .about-details {
         background: linear-gradient(314.19deg, #4B4B4D -1.41%, #37B80E 98.58%);
     }
@@ -10,10 +11,10 @@
 }
 
 .story-section {
-    margin: 4rem 0;
+    margin: 3rem 0;
     img {
-        height: 250px;
-        width: 400px;
+        height: 200px;
+        width: 300px;
         animation: float 4.5s ease-in-out infinite;
     }
 }
@@ -35,6 +36,19 @@
 
 .impacts {
     background: #D2D2D2;
+}
+
+@media screen and (min-width: 992px) {
+    .hero-section {
+        height: 400px;
+    }
+    .story-section {
+        margin: 4rem 0;
+        img {
+            height: 250px;
+            width: 300px;
+        }
+    }
 }
 
 @keyframes pulse {
