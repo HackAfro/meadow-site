@@ -1,0 +1,7 @@
+input,
+textarea {
+    &:focus {
+        border-color: #37B80E;
+        outline: none;
+    }
+}

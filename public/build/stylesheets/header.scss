@@ -1,0 +1,15 @@
+.header {
+    top: 0;
+    z-index: 100;
+    .brand {
+        img {
+            height: 40px;
+        }
+    }
+    li {
+        line-height: 40px;
+        a {
+            color: #37B80E;
+        }
+    }
+}

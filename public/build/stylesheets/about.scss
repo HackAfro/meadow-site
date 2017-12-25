@@ -1,0 +1,62 @@
+@import './layout.scss';
+.hero-section {
+    height: 400px;
+    .about-details {
+        background: linear-gradient(314.19deg, #4B4B4D -1.41%, #37B80E 98.58%);
+    }
+    .side-img {
+        background: url('/images/liming.png');
+    }
+}
+
+.story-section {
+    margin: 4rem 0;
+    img {
+        height: 250px;
+        width: 400px;
+        animation: float 4.5s ease-in-out infinite;
+    }
+}
+
+.team-section {
+    background: #F5F5F5;
+    .team-icon {
+        width: 180px;
+        background: transparent;
+        animation: pulse 1.5s ease-in-out infinite;
+    }
+    .hollow-second {
+        margin-top: 3rem;
+    }
+    .team-member {
+        background: rgba(0, 0, 0, 0.6);
+    }
+}
+
+.impacts {
+    background: #D2D2D2;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1)
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(20px)
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

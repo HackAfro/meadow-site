@@ -1,0 +1,22 @@
+@import './header';
+@import './footer';
+@import './partials/variables';
+@import './partials/form';
+body {
+    font-family: 'Lato';
+    padding-top: 64px;
+    a {
+        text-decoration: none;
+    }
+}
+
+.partners {
+    background: rgba(0, 0, 0, 0.03);
+    .partner {
+        filter: grayscale(1);
+        height: 40px;
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+}
