@@ -34,6 +34,8 @@ gulp.task('tailwind', () => {
         .pipe(gulp.dest('public/dist/stylesheets/styles.scss'));
 });
 
+gulp.task('build-css', ['tailwind', 'scss']);
+
 // gulp.task('pug', () =>
 //     gulp.src(paths.pug.src)
 //     .pipe(pug())

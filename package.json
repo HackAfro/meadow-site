@@ -18,9 +18,9 @@
     "tailwindcss": "^0.4.0"
   },
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "npm run build:css && node ./bin/www",
     "start-dev": "nodemon ./bin/www",
-    "build": "gulp"
+    "build:css": "gulp build-css"
   },
   "devDependencies": {
     "browser-sync": "^2.21.0",
