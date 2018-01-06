@@ -18,7 +18,8 @@
     "tailwindcss": "^0.4.0"
   },
   "scripts": {
-    "start": "npm run build:css && node ./bin/www",
+    "postinstall": "npm run build:css",
+    "start": "node ./bin/www",
     "start-dev": "nodemon ./bin/www",
     "build:css": "gulp build-css"
   },
