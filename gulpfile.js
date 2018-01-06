@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
 const postcss = require('gulp-postcss');
 const tailwind = require('tailwindcss');
 const browserSync = require('browser-sync');
