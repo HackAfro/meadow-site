@@ -25,5 +25,9 @@
   "devDependencies": {
     "browser-sync": "^2.21.0",
     "gulp-pug": "^3.3.0"
+  },
+  "engines": {
+    "node": "<=8.5",
+    "npm": "<=5.5.1"
   }
 }
