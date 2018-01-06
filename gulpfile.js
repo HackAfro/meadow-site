@@ -1,12 +1,9 @@
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
 const tailwind = require('tailwindcss');
-const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
-const pug = require('gulp-pug');
 const del = require('del');
 
-const server = browserSync.create();
 
 const paths = {
     scss: {
@@ -58,6 +55,9 @@ gulp.task('pug-reload', () =>
 );
 
 gulp.task('default', ['scss'], () => {
+    const browserSync = require('browser-sync');
+    const server = browserSync.create();
+
     server.init({
         proxy: 'localhost:8080',
         files: ['public/dist/*.css', 'build/html/*html']
