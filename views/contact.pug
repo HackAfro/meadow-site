@@ -12,7 +12,7 @@ block content
 
     section.contact-section.my-8
         .flex.flex-wrap.mx-auto.mb-8(class="w-full lg:w-3/4")
-            div(class="w-full lg:w-1/2 px-6")
+            div(class="w-full md:w-1/2 lg:w-1/2 px-6")
                 h2.uppercase.font-extrabold.tracking-wide.my-2.text-sm.mb-8(class="lg:text-md") Contact Us
 
                 .contact-zone.px-8
@@ -26,7 +26,7 @@ block content
                     p.text-sm.text-grey #[i.fa.fa-twitter.mr-3] @MeadowFoodsNg
                     hr                    
                     p.text-sm.text-grey #[i.fa.fa-facebook.mr-3] @MeadowFoodsNig
-            div.px-8.contact-form(class="w-full mt-8 pt-8 lg:w-1/2 lg:mt-0 lg:pt-0")
+            div.px-8.contact-form(class="w-full mt-8 pt-8 md:w-1/2 lg:w-1/2 lg:mt-0 lg:pt-0")
                 .flex.mb-8
                     div(class="w-full lg:w-1/2")
                         input.px-4.py-3.shadow.rounded.text-xs.w-full.border-2(type="text", placeholder="Your Name")
@@ -35,6 +35,9 @@ block content
                 
                 div(class="w-full")
                     textarea.px-4.py-3.shadow.text-xs.w-full.border-2.rounded(placeholder="Your Message", rows="6")
+                
+                div
+                    button.rounded.bg-green.text-white.px-8.py-3.font-extrabold.text-xs.uppercase.my-4 submit
 
 
 
