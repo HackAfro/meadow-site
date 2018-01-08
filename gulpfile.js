@@ -2,8 +2,11 @@ const gulp = require('gulp');
 const postcss = require('gulp-postcss');
 const tailwind = require('tailwindcss');
 const sass = require('gulp-sass');
+const babel = require('gulp-babel');
+const sourcemaps = require('gulp-sourcemaps');
 const del = require('del');
 
+var server;
 
 const paths = {
     scss: {
@@ -15,11 +18,13 @@ const paths = {
         src: 'views/**/*.pug',
         dest: 'build/html/',
         serve: 'build/html/*html'
+    },
+    js: {
+        src: 'public/build/javascripts/**/*.js',
+        dest: 'public/dist/javascripts/',
+        serve: 'public/dist/javascripts/'
     }
 };
-
-// gulp.task('clean', () => del(['build']));
-
 
 gulp.task('tailwind', () => {
     gulp.src('./config.css')
@@ -32,12 +37,32 @@ gulp.task('tailwind', () => {
 
 gulp.task('build-css', ['tailwind', 'scss']);
 
-// gulp.task('pug', () =>
-//     gulp.src(paths.pug.src)
-//     .pipe(pug())
-//     .pipe(gulp.dest(paths.pug.dest))
-// );
+gulp.task('copy-polyfill', () => {
+    const poly = require('babel-polyfill');
+    if (poly) {
+        const copy = require('gulp-copy');
+        console.log('fire')
+        return gulp.src('/node_modules/babel-polyfill/dist/polyfill.min.js')
+            .pipe(copy('/public/dist/javascripts/'), {
+                prefix: 1
+            });
+        // .pipe(gulp.dest('/public/dist/javascripts/'));
+    } else {
+        throw Error("You don't have babel-polyfill installed. Pleae install before continuing")
+    }
+});
 
+gulp.task('js', ['copy-polyfill'], () =>
+    gulp.src(paths.js.src)
+    .pipe(sourcemaps.init())
+    .pipe(babel({
+        presets: [
+            "env"
+        ],
+    })).on('error', (err) => console.log(err))
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest(paths.js.dest))
+);
 
 gulp.task('scss', () =>
     gulp.src(paths.scss.src)
@@ -49,14 +74,17 @@ gulp.task('css-reload', ['scss'], () =>
     server.reload()
 );
 
-
 gulp.task('pug-reload', () =>
+    server.reload()
+);
+
+gulp.task('js-reload', ['js'], () =>
     server.reload()
 );
 
 gulp.task('default', ['scss'], () => {
     const browserSync = require('browser-sync');
-    const server = browserSync.create();
+    server = browserSync.create();
 
     server.init({
         proxy: 'localhost:8080',
@@ -64,4 +92,5 @@ gulp.task('default', ['scss'], () => {
     });
     gulp.watch(paths.scss.src, ['css-reload']);
     gulp.watch(paths.pug.src, ['pug-reload']);
+    gulp.watch(paths.js.src, ['js-reload']);
 });

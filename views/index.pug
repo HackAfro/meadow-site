@@ -61,14 +61,19 @@ block content
       div(class="w-full lg:w-3/5")
         h2.uppercase.font-extrabold.my-4.text-sm.text-center Send us a Message
 
-        form#contact-form(class="w-full lg:w-3/4 lg:mx-auto")
-          div.flex.flex-wrap.mb-8
+        form#contact-form(class="w-full lg:w-3/4 lg:mx-auto", action="/send-message", method="post")
+          .alert.hidden.mx-auto.bg-black.py-3.px-6.text-xs.font-bold.text-white.rounded.relative.my-3(class="w-3/4")
+            p.inline.message 
+            i.fa.fa-close.absolute.cursor-pointer.inline.text-white.ml-4.close-alert  
+          div.flex.flex-wrap.mb-8 
             div(class="w-full px-4 py-4 mb-8 md:w-1/2 md:mb-0 lg:w-1/2 lg:mb-0 ")
-              input.border-b-2.border-grey.w-full.py-3.px-6.rounded-none(type="text", class="focus:border-green", placeholder="Your Name")
+              input.border-b-2.border-grey.w-full.py-3.px-6.rounded-none(type="text", class="focus:border-green", id="name" placeholder="Your Name" name="name" required)
             div(class="w-full px-4 py-4 md:w-1/2 lg:w-1/2")
-              input.border-b-2.border-grey.w-full.py-3.px-6.rounded-none(type="text", class="focus:border-green", placeholder="Your Email")
-          div(class="px-4 py-4")
-            textarea.border-b-2.border-grey.w-full.py-3.px-4.rounded-none(class="focus:border-green", placeholder="Your Message")
+              input.border-b-2.border-grey.w-full.py-3.px-6.rounded-none(type="email", class="focus:border-green", id="email" placeholder="Your Email" name="email" required)
+          div(class="px-4 py-4")     
+            textarea.border-b-2.border-grey.w-full.py-3.px-4.rounded-none(class="focus:border-green", placeholder="Your Message" id="message" name="message" required)
+          .text-center.mt-3
+            button.rounded.text-white.text-center.px-4.py-3.bg-green.shadow.text-xs.uppercase.font-extrabold(class="hover:bg-green-light" type="submit") Send Message
       div(class="w-full flex flex-col items-center text-center lg:w-1/3 lg:items-start lg:text-left").contact-details
         div
           h2.text-sm.font-extrabold.text-grey.uppercase.my-3 Call Us
@@ -83,4 +88,9 @@ block content
           p.text-xs.font-extrabold.uppercase.opacity-75.leading-md.mb-4 #[i.fa.fa-twitter.mr-4] @MeadowFoodsNg
           p.text-xs.font-extrabold.uppercase.opacity-75.leading-md #[i.fa.fa-facebook.mr-4] @MeadowFoodsNig
       
-  include ./partials/partners  
+  include ./partials/partners
+
+block scripts
+  script(src="https://unpkg.com/axios/dist/axios.min.js")
+  script(src="dist/javascripts/send-message.js" type="text/javascript")           
+
