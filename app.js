@@ -11,6 +11,7 @@ var index = require('./routes/index');
 var contact = require('./routes/contact');
 var about = require('./routes/about');
 var sendMessage = require('./routes/send-message');
+var ussd = require('./routes/ussd');
 
 var app = express();
 
@@ -38,6 +39,7 @@ app.use('/', index);
 app.use('/contact', contact);
 app.use('/about-us', about);
 app.use('/send-message', sendMessage);
+app.use('/ussd', ussd);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
