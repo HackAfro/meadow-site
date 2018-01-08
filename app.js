@@ -4,11 +4,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-// var sassMiddleware = require('node-sass-middleware');
+
+require('dotenv').config();
 
 var index = require('./routes/index');
 var contact = require('./routes/contact');
 var about = require('./routes/about');
+var sendMessage = require('./routes/send-message');
 
 var app = express();
 
@@ -35,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/contact', contact);
 app.use('/about-us', about);
+app.use('/send-message', sendMessage);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

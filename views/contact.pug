@@ -26,24 +26,29 @@ block content
                     p.text-sm.text-grey #[i.fa.fa-twitter.mr-3] @MeadowFoodsNg
                     hr                    
                     p.text-sm.text-grey #[i.fa.fa-facebook.mr-3] @MeadowFoodsNig
-            div.px-8.contact-form(class="w-full mt-8 pt-8 md:w-1/2 lg:w-1/2 lg:mt-0 lg:pt-0")
+            form.px-8#contact-form(class="w-full mt-8 pt-8 md:w-1/2 lg:w-1/2 lg:mt-0 lg:pt-0")
+                .alert.hidden.mx-auto.bg-black.py-3.px-6.text-xs.font-bold.text-white.rounded.relative.my-3(class="w-3/4")
+                    p.inline.message 
+                    i.fa.fa-close.absolute.cursor-pointer.inline.text-white.ml-4.close-alert 
                 .flex.mb-8
                     div(class="w-full lg:w-1/2")
-                        input.px-4.py-3.shadow.rounded.text-xs.w-full.border-2(type="text", placeholder="Your Name")
+                        input.px-4.py-3.shadow.rounded.text-xs.w-full.border-2(type="text", placeholder="Your Name", id="name")
                     div(class="w-full pl-4 lg:w-1/2")
-                        input.px-4.py-3.shadow.rounded.text-xs.w-full.border-2(type="email", placeholder="Your Email")
+                        input.px-4.py-3.shadow.rounded.text-xs.w-full.border-2(type="email", placeholder="Your Email", id="email")
                 
                 div(class="w-full")
-                    textarea.px-4.py-3.shadow.text-xs.w-full.border-2.rounded(placeholder="Your Message", rows="6")
+                    textarea.px-4.py-3.shadow.text-xs.w-full.border-2.rounded(placeholder="Your Message", rows="6", id="message")
                 
                 div
-                    button.rounded.bg-green.text-white.px-8.py-3.font-extrabold.text-xs.uppercase.my-4 submit
+                    button.rounded.bg-green.text-white.px-8.py-3.font-extrabold.text-xs.uppercase.my-4(type="submit") submit
 
 
 
 
 
 block scripts
-
-    script(src="build/javascripts/map.js" type="text/javascript")           
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js")
+    script(src="https://unpkg.com/axios/dist/axios.min.js")
+    script(src="dist/javascripts/send-message.js" type="text/javascript")           
+    script(src="dist/javascripts/map.js" type="text/javascript")           
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvFH-0VEKeDJ9zmS5fUhwWk6dapU9kEqk&callback=initMap", async, defer)
