@@ -20,9 +20,6 @@ module.exports = {
         auth: {
             user: process.env.EMAIL,
             pass: process.env.EMAIL_PASS
-        },
-        tls: {
-            rejectUnauthorized: false
         }
     }),
     log: console.log,

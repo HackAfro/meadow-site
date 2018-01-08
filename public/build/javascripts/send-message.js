@@ -24,13 +24,9 @@ async function sendMessage(e) { // jshint ignore:line
             message
         };
         try {
-            const res = await fetch('/send-message', { // jshint ignore:line
-                method: 'post',
-                data: JSON.stringify(data),
-            });
+            const res = await axios.post('/send-message', data); // jshint ignore:line
 
-            const jsonRes = await res.json(); // jshint ignore:line
-            form.querySelector('.message').innerText = jsonRes.message;
+            form.querySelector('.message').innerText = res.message;
             form.querySelector('.alert').classList.remove('hidden');
         } catch (err) {
             console.log(err);

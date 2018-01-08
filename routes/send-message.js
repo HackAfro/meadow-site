@@ -18,7 +18,7 @@ function sendMail(req, res, next) {
 
     const mailOptions = {
         from: process.env.GMAIL,
-        to: `24x7@meadowfoods.com.ng`,
+        to: `richyafro@gmail.com`,
         subject: `Message from ${data.name}`,
         html: `<h4 style="text-align:center; font-weight:bold; color: lightgreen">You have a new message</h4>
                 <p style="font-weight:bold; opacity: .75">From: ${data.name}-${data.email}</p>       
@@ -29,6 +29,7 @@ function sendMail(req, res, next) {
     };
     transporter.sendMail(mailOptions, (err, info) => {
         if (err) {
+            console.log(err);
             const message = {
                 message: "There was an error while sending your message"
             };

@@ -37,22 +37,8 @@ gulp.task('tailwind', () => {
 
 gulp.task('build-css', ['tailwind', 'scss']);
 
-gulp.task('copy-polyfill', () => {
-    const poly = require('babel-polyfill');
-    if (poly) {
-        const copy = require('gulp-copy');
-        console.log('fire')
-        return gulp.src('/node_modules/babel-polyfill/dist/polyfill.min.js')
-            .pipe(copy('/public/dist/javascripts/'), {
-                prefix: 1
-            });
-        // .pipe(gulp.dest('/public/dist/javascripts/'));
-    } else {
-        throw Error("You don't have babel-polyfill installed. Pleae install before continuing")
-    }
-});
 
-gulp.task('js', ['copy-polyfill'], () =>
+gulp.task('js', () =>
     gulp.src(paths.js.src)
     .pipe(sourcemaps.init())
     .pipe(babel({
