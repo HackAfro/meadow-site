@@ -30,7 +30,7 @@
     "postinstall": "npm run build",
     "start": "node ./bin/www",
     "start:dev": "concurrently --kill-others \"nodemon ./bin/www\" \"gulp\"",
-    "build": "npm run build:css && npm run build:css",
+    "build": "npm run build:css && npm run build:js",
     "build:css": "gulp build-css",
     "build:js": "gulp js"
   },
