@@ -2,11 +2,12 @@
 .hero-section {
     height: 300px;
     width: fit-content;
+    background: url('/images/liming.png') no-repeat;
+    background-size: cover;
     .about-details {
-        background: linear-gradient(314.19deg, #4B4B4D -1.41%, #37B80E 98.58%);
+        height: 300px;
     }
     .side-img {
-        background: url('/images/liming.png');
     }
 }
 
@@ -39,6 +40,10 @@
 @media screen and (min-width: 992px) {
     .hero-section {
         height: 400px;
+
+        .about-details{
+            height: 400px;
+        }
     }
     .story-section {
         margin: 4rem 0;
