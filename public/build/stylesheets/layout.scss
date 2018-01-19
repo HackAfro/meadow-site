@@ -3,12 +3,19 @@
 @import './partials/variables';
 @import './partials/form';
 body {
-    font-family: 'Lato';
+    //font-family: 'Lato';
+    font-family: 'Reem Kufi', sans-serif;
+
     padding-top: 64px;
     a {
         text-decoration: none;
     }
 }
+
+.active{
+    border-bottom: 3px solid #1a4731;
+}
+
 
 .partners {
     background: rgba(0, 0, 0, 0.03);
