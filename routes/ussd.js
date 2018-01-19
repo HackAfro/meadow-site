@@ -1,9 +1,9 @@
 const router = require('express').Router();
 
 router.post('/', (req, res) => {
-  console.log(req.body);
+  console.log(req.body, req.body['text']);
   const data = req.body;
-  if(data.sessionId && data.serviceCode && data.phoneNumber && data['text']) {
+  if(data.sessionId && data.serviceCode && data.phoneNumber) {
     const {
       sessionId,
       serviceCode,
