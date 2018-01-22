@@ -1,6 +1,7 @@
 @import './layout';
 .hero-section {
-    background: url('/images/IMG_1182.png');
+    background: url('/images/IMG_1182.png') no-repeat;
+    background-size: cover;
     height: 400px;
 }
 

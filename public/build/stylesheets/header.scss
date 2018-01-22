@@ -9,14 +9,14 @@
   li {
     line-height: 40px;
     a {
-      color: #37B80E;
+      color: black;
     }
   }
 }
 
 .nav-item {
   &:hover {
-    border-bottom: 2px solid #1a4731;
+    color: #37B80E;
   }
 }
 
