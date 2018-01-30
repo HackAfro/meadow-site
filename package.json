@@ -34,7 +34,7 @@
     "start:dev": "concurrently --kill-others \"nodemon ./bin/www\" \"gulp\" \"npm run parcel:watch\"",
     "build": "npm run build:css && npm run build:js",
     "build:css": "gulp build-css",
-    "build:js": "concurrently --kill-others \"gulp js\" \"npm run parcel:build\"",
+    "build:js": "concurrently \"gulp js\" \"npm run parcel:build\"",
     "parcel:build": "parcel build ./public/build/javascripts/site.js -d ./public/dist/javascripts/",
     "parcel:watch": "parcel watch ./public/build/javascripts/site.js -d ./public/dist/javascripts/"
   },
