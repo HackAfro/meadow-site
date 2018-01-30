@@ -5,28 +5,28 @@
   overflow: hidden;
   .image-1 {
     background: linear-gradient(0deg, #4a4646, #4a4646),
-      url('/images/our-team.jpg'), no-repeat;
+      url('http://res.cloudinary.com/hackafro/image/upload/c_scale,w_1979/v1517327728/our-team_fyhdga.jpg'), no-repeat;
     background-blend-mode: multiply, normal;
     background-size: cover;
     height: 500px;
   }
   .image-2 {
     background: linear-gradient(0deg, #4a4646, #4a4646),
-      url('/images/workers.jpg'), no-repeat;
+      url('https://res.cloudinary.com/hackafro/image/upload/c_scale,w_1676/v1517327727/workers_lheihe.jpg'), no-repeat;
     background-blend-mode: multiply, normal;
     background-size: cover;
     height: 500px;
   }
   .image-3 {
     background: linear-gradient(0deg, #4a4646, #4a4646),
-      url('/images/tractor.jpg'), no-repeat;
+      url('http://res.cloudinary.com/hackafro/image/upload/v1517327724/tractor_fxr4wf.jpg'), no-repeat;
     background-blend-mode: multiply, normal;
     background-size: cover;
     height: 500px;
   }
   .image-4 {
     background: linear-gradient(0deg, #4a4646, #4a4646),
-      url('/images/spraying.jpg'), no-repeat;
+      url('http://res.cloudinary.com/hackafro/image/upload/v1517327723/spraying_fcp5hl.jpg'), no-repeat;
     background-blend-mode: multiply, normal;
     background-size: cover;
     height: 500px;
@@ -51,7 +51,7 @@
 }
 
 .testimonials {
-  background: url('/images/testi-bg.svg');
+  background: url('http://res.cloudinary.com/hackafro/image/upload/v1517327760/testi-bg_ed86yv.svg');
   margin: 3rem 0;
   .testi-image {
     margin-left: 10%;
