@@ -1,45 +1,87 @@
 @import './layout';
 .hero-section {
-    background: url('/images/IMG_1182.png') no-repeat;
+  background-size: cover;
+  height: 400px;
+  overflow: hidden;
+  .image-1 {
+    background: linear-gradient(0deg, #4a4646, #4a4646),
+      url('/images/our-team.jpg'), no-repeat;
+    background-blend-mode: multiply, normal;
     background-size: cover;
-    height: 400px;
+    height: 500px;
+  }
+  .image-2 {
+    background: linear-gradient(0deg, #4a4646, #4a4646),
+      url('/images/workers.jpg'), no-repeat;
+    background-blend-mode: multiply, normal;
+    background-size: cover;
+    height: 500px;
+  }
+  .image-3 {
+    background: linear-gradient(0deg, #4a4646, #4a4646),
+      url('/images/tractor.jpg'), no-repeat;
+    background-blend-mode: multiply, normal;
+    background-size: cover;
+    height: 500px;
+  }
+  .image-4 {
+    background: linear-gradient(0deg, #4a4646, #4a4646),
+      url('/images/spraying.jpg'), no-repeat;
+    background-blend-mode: multiply, normal;
+    background-size: cover;
+    height: 500px;
+  }
+
+  .hero-details {
+    z-index: 1;
+    top: 0;
+  }
 }
 
 .operation {
-    margin: 3rem 0;
-    padding: 1rem 20px; // background: rgba(0, 0, 0, 0.04);
-    .operation-icon {
-        width: 200px;
-        height: 200px;
-        &:hover {
-            transform: scale(1.06);
-        }
+  margin: 3rem 0;
+  padding: 1rem 20px; // background: rgba(0, 0, 0, 0.04);
+  .operation-icon {
+    width: 200px;
+    height: 200px;
+    &:hover {
+      transform: scale(1.06);
     }
+  }
 }
 
 .testimonials {
-    background: url('/images/testi-bg.svg');
-    margin: 3rem 0;
-    .testi-image {
-        margin-left: 10%;
-        width: 120px;
-        height: 120px;
-        margin-top: -15%;
-    }
-    .slide-toggles {
-        bottom: -15px;
-        right: 40px
-    }
+  background: url('/images/testi-bg.svg');
+  margin: 3rem 0;
+  .testi-image {
+    margin-left: 10%;
+    width: 120px;
+    height: 120px;
+    margin-top: -15%;
+  }
+  .slide-toggles {
+    bottom: -15px;
+    right: 40px;
+  }
 }
 
-@media screen and (min-width:992px) {
-    .contact-details {
-        margin-left: 6%;
-    }
-    .testi-image {
-        margin-left: 30%;
-    }
-    .hero-section {
-        height: 500px;
-    }
+@media screen and (min-width: 992px) {
+  .contact-details {
+    margin-left: 6%;
+  }
+  .testi-image {
+    margin-left: 30%;
+  }
+  .hero-section {
+    height: 500px;
+  }
+  .image-1,
+  .image-2,
+  .image-3,
+  .image-4 {
+    height: 500px;
+  }
+  .hero-details{
+    left: 10%;    
+  }
 }

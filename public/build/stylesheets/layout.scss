@@ -3,27 +3,43 @@
 @import './partials/variables';
 @import './partials/form';
 body {
-    //font-family: 'Lato';
-    font-family: 'Reem Kufi', sans-serif;
+  //font-family: 'Lato';
+  font-family: 'Reem Kufi', sans-serif;
 
-    padding-top: 64px;
-    a {
-        text-decoration: none;
-    }
+  padding-top: 64px;
+  a {
+    text-decoration: none;
+  }
 }
 
-.active{
-    color: #37B80E !important;
+.active {
+  color: #37b80e !important;
 }
 
+.typed-cursor {
+  animation: flash 1s ease-in-out infinite;
+  font-size: 2.5rem;
+}
 
 .partners {
-    background: rgba(0, 0, 0, 0.03);
-    .partner {
-        filter: grayscale(1);
-        height: 40px;
-        &:hover {
-            filter: grayscale(0);
-        }
+  background: rgba(0, 0, 0, 0.03);
+  .partner {
+    filter: grayscale(1);
+    height: 40px;
+    &:hover {
+      filter: grayscale(0);
     }
+  }
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
