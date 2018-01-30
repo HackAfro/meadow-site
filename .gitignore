@@ -1,6 +1,7 @@
 node_modules/
-public/dist/
+dist/
 yarn-error.log
 package-lock.json
 test.http
 .*
+yarn.lock
