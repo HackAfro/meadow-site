@@ -4,7 +4,6 @@ const tailwind = require('tailwindcss');
 const sass = require('gulp-sass');
 const babel = require('gulp-babel');
 const sourcemaps = require('gulp-sourcemaps');
-const del = require('del');
 
 var server;
 
