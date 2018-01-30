@@ -4,7 +4,7 @@ block title
     title About Us | Meadow Foods
 
 block links
-    link(rel="stylesheet", href="dist/stylesheets/about.css")
+    link(rel="stylesheet", href="/dist/stylesheets/about.css")
 
 block content
 
@@ -12,7 +12,7 @@ block content
         .flex.flex-wrap
             .w-full.flex-col.justify-center.items-center.h-full.px-8.about-details(class="flex lg:w-3/4 lg:mx-auto lg:px-8")
                 h1.font-extrabold.uppercase.tracking-wide.text-white.my-4(class="text-2xl lg:text-3xl") About Us
-                h4.font-thin.text-white(class="text-xs lg:text-lg") 
+                h4.font-thin.text-white(class="text-sm leading-normal lg:text-lg") 
                     | At Meadow Foods, we aspire to solve global food problems
                     | by partnering with our local communities to create growth opportunities
                     | providing our customers with high quality raw and processed food whilst
@@ -34,7 +34,7 @@ block content
         .flex.flex-wrap(class="w-full lg:w-3/4 lg:mx-auto")
             div.px-8(class="w-full lg:w-1/2")
                 h2.uppercase.text-sm.font-extrabold.text-black.text-center.my-4 Our Story
-                p.text-sm.opacity-50 
+                p.opacity-75.leading-normal
                     | Meadow Foods was founded as a child of necessity. Over the past decade, we had seen 
                     | a continous increase in the price of staple foods such as rice, garri in Nigeria;
                     | even though there is an abundance of land resources, global hunger continues to rise
@@ -47,17 +47,17 @@ block content
                     | practices and they do not have the access to markets that gives them commensurate value
                     | for their product 
 
-            .text-center.py-6(class="w-full lg:w-1/2")
-                img.shadow-lg(src="/images/cassava-field.jpeg", alt="Meadow staff in farm")
+            .text-center.py-6.flex.items-center.justify-center.px-6(class="w-full lg:w-1/2")
+                img.shadow-lg(src="http://res.cloudinary.com/hackafro/image/upload/v1517327656/cassava-field_n9umhp.jpg", alt="Meadow staff in farm")
 
     
-    section.team-section.my-8.py-8
+    section.team-section.my-4.py-8
         h2.uppercase.text-sm.font-extrabold.text-black.text-center.my-4 Our Team
 
         .flex.flex-wrap(class="w-full lg:w-3/4 lg:mx-auto")
             div(class="w-full lg:w-1/2 p-8 text-center")
-                img.team-icon.bg-transparent(src="/images/001-student.svg", alt="Team work")
-                p.text-sm.text-grey.text-center.mt-8
+                img.team-icon.bg-transparent(src="http://res.cloudinary.com/hackafro/image/upload/v1517327599/001-student_kob1rh.svg", alt="Team work")
+                p.text-grey.text-center.mt-8
                     | We have a team of highly dedicated people that #[br] work to help us grow and move forward #[br] as an institution
 
             div(class="w-full lg:w-1/2 px-8 flex items-center justify-center")

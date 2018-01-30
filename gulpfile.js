@@ -20,9 +20,9 @@ const paths = {
         serve: 'build/html/*html'
     },
     js: {
-        src: 'public/build/javascripts/**/*.js',
-        dest: 'public/dist/javascripts/',
-        serve: 'public/dist/javascripts/'
+        src: './public/build/javascripts/components/**/*.js',
+        dest: './public/dist/javascripts/',
+        serve: './public/dist/javascripts/'
     }
 };
 

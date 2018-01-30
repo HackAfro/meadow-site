@@ -1,4 +1,3 @@
-// require('dotenv').config();
 var nodemailer = require('nodemailer');
 
 module.exports = {
