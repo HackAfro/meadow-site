@@ -3,5 +3,6 @@ dist/
 yarn-error.log
 package-lock.json
 test.http
-.*
+.env
+.cache
 yarn.lock
